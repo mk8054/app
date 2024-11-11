@@ -1,0 +1,12 @@
+{
+  "name": "Project",
+  "displayName": "Project",
+  "plugins": [
+    "expo-font"
+  ],
+  "extra": {
+    "eas": {
+      "projectId": "35d5de08-3634-43a2-9b26-a56fadee6acf"
+    }
+  }
+}
