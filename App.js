@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AppRegistry } from 'react-native';
 
 // component
+
+import Example from './Example';
 import Signup from './Component/Signup';
 import Login from './Component/Login';
 import Worksite from './Component/Worksite';
@@ -37,13 +39,14 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name='Signup' component={Signup} />
+          {/* <Stack.Screen name='Example' component={Example} /> */}
+          {/* <Stack.Screen name='Signup' component={Signup} />
           <Stack.Screen name='Login' component={Login} />
           <Stack.Screen name='Schedule' component={Schedule} />
           <Stack.Screen name='Worksite' component={Worksite} />
           <Stack.Screen name='Reports' component={Reports} />
           <Stack.Screen name='Location' component={Location} />
-          <Stack.Screen name="Dailyreport" component={Dailyreport} />
+          <Stack.Screen name="Dailyreport" component={Dailyreport} /> */}
           <Stack.Screen name='FieldInspection' component={FieldInspection} />
           <Stack.Screen name='Incidentreport' component={Incidentreport} />
           <Stack.Screen name='Incidentchecklist' component={Incidentchecklist} />

@@ -76,15 +76,14 @@ const Maintenace = ({ navigation }) => {
             formData.append(`observations[${index}]`, id);
         });
 
-        // Upload media files correctly
         await Promise.all(media.map(async (uri, index) => {
-            const fileType = uri.split('.').pop(); // get file extension
+            const fileType = uri.split('.').pop();
             const response = await fetch(uri);
             const blob = await response.blob();
             formData.append('attachments', {
-                name: `media_${index}.${fileType}`, // provide a name for the file
-                type: `image/${fileType}`, // set the correct mime type
-                uri: uri, // add the URI here
+                name: `media_${index}.${fileType}`,
+                type: `image/${fileType}`,
+                uri: uri,
             });
         }));
 
@@ -109,8 +108,6 @@ const Maintenace = ({ navigation }) => {
             console.error('Error submitting form:', error);
         }
     };
-
-
 
     const handleClearForm = () => {
         setmaintenanceTypeId('');
@@ -182,11 +179,7 @@ const Maintenace = ({ navigation }) => {
                         </View>
                         <View style={style.maindropdownview}>
                             <View style={style.dropdownmenuandiconview}>
-                                <Picker
-                                    selectedValue={maintenanceTypeId}
-                                    onValueChange={(itemValue) => setmaintenanceTypeId(itemValue)}
-                                    style={style.dropdownheadingtext}
-                                >
+                                <Picker selectedValue={maintenanceTypeId} onValueChange={(itemValue) => setmaintenanceTypeId(itemValue)} style={style.dropdownheadingtext}>
                                     <Picker.Item label="Select Inspection Type" value={null} />
                                     {Array.isArray(types) && types.map((type) => (
                                         <Picker.Item key={type._id} label={type.typeName} value={type._id} />

@@ -23,6 +23,14 @@ const Style = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 20
     },
+    radioButtonContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    radioButtonText: {
+        marginLeft: 8, // Adjust spacing as needed
+        fontSize: 16,  // Adjust font size as needed
+    },
     loginpageheadingtext: {
         color: Colors.YaleBlue,
         fontWeight: 'bold',
@@ -753,7 +761,7 @@ const Style = StyleSheet.create({
         width: '92%'
     },
     mediaimageview: {
-        width: 117, padding: 5
+        width: 115, padding: 5
     },
     mediaimage: {
         width: '100%',
